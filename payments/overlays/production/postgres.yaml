@@ -3,6 +3,7 @@ kind: PostgresCluster
 metadata:
   name: payments
 spec:
+  postgresVersion: 13
   instances:
     - name: 'pgc'
       replicas: 2
