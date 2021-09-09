@@ -1,0 +1,4 @@
+namespace: cyberthreats
+
+resources:
+- postgres.yaml

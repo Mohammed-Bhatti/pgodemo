@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cyberthreats-lb
+  namespace: cyberthreats
+spec:
+  selector:
+    postgres-operator.crunchydata.com/role: master
+    postgres-operator.crunchydata.com/cluster: cyberthreatsdb
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: LoadBalancer
