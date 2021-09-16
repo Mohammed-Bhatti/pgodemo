@@ -6,7 +6,7 @@ spec:
   postgresVersion: 13
   instances:
     - name: 'pgc'
-      replicas: 5
+      replicas: 2
       resources:
         limits:
           cpu: 1.0
@@ -44,7 +44,7 @@ spec:
     dynamicConfiguration:
       postgresql:
         parameters:
-          max_parallel_workers: 4
+          max_parallel_workers: 2
           max_worker_processes: 2
           shared_buffers: 512MB
           archive_timeout: 600
